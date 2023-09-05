@@ -1,0 +1,229 @@
+:root{
+    --color-text: yellow;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #1f242d;
+    color: #fff;
+    height: 100vh;
+    animation: bakc 1s ease forwards ;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--1));
+}
+.navbar a:hover,
+a.active{
+    color: rgb(255, 255, 68);
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    animation: slideButtom 1s ease forwards;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    font-weight: 700;
+    animation: slideTop 1s ease forwards;
+
+}
+.home-content h3 span{
+    color: rgb(227, 227, 12);
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    font-weight: 700;
+    transition: .3s;
+    animation: slideRight 3s ease forwards;
+    animation-delay: 1s;
+    
+}
+.home-content p{
+    font-size: 17px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 40px;
+}
+.home-img{
+    max-width: 450px;
+    margin-right: -20px;
+}
+.photo{
+   border-radius: 40px;
+   
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    margin-top: 20em;
+}
+.social-media a:hover{
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn{
+    display: flex;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0ef;
+    text-decoration: none;
+    font-size: 16x;
+    color: #1f242d;
+    letter-spacing: 1px;
+    font-weight: 650;
+    position: absolute;
+    margin-top: 10em;
+    margin-left: -30em;
+    animation: slideTop 1s ease forwards;
+    
+}
+footer{
+    
+    color: #fff;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: rgb(161, 161, 0);
+
+}
+footer{
+    opacity: 0;
+    animation: slideRight 2s ease forwards;
+    animation-delay: .5s;
+}
+.plink{
+    justify-content: space-between;
+    padding-right: 12px;
+    text-align: center;
+    gap: 3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 1s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--j));
+}
+.plink:hover{
+    background-color: #fff;
+    color: rgb(161, 161, 0);
+    border-radius: 20px;
+    width: 5em;
+}
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideButtom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
